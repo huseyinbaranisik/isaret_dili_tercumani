@@ -1,0 +1,1 @@
+# Dinamik-ve-E-itilebilir-aret-Dili-Terc-man-
