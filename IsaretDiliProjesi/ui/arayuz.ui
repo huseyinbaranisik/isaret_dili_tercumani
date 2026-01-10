@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>main_window</class>
+ <widget class="QDialog" name="main_window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1830</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>İşaret dili çevirici</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Arka plan rengi (Koyu Siyah) */
+background-color: #121212;
+QMessageBox {
+    background-color: #121212;
+}
+QMessageBox QLabel {
+    color: white;
+}</string>
+  </property>
+  <widget class="QGroupBox" name="gb_kamera">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>711</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 2px solid #555555; 
+    border-radius: 12px;
+    margin-top: 1.5ex; 
+    background-color: transparent;
+}
+
+QGroupBox::title {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    subcontrol-origin: margin;
+    subcontrol-position: top center; 
+    padding: 0 15px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Canlı kamera</string>
+   </property>
+   <widget class="QLabel" name="label_kamera_ekrani">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>691</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>640</width>
+      <height>480</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: black;
+border: 2px solid greY;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="gb_butonlar">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>10</y>
+     <width>261</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 2px solid #555555; 
+    border-radius: 12px;
+    margin-top: 1.5ex; 
+    background-color: transparent;
+}
+
+QGroupBox::title {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    subcontrol-origin: margin;
+    subcontrol-position: top center; 
+    padding: 0 15px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Butonlar</string>
+   </property>
+   <widget class="QRadioButton" name="rd_btn_eklenti_gizle">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QRadioButton {
+    background-color: #6A1B9A;
+    color: white;   
+    font-weight: bold;      
+    font-size: 20px;        
+    border-radius: 15px;      
+    border: none;            
+    padding: 0px;           
+    text-align: center;     
+}
+
+QRadioButton::indicator {
+    width: 0px;
+    height: 0px;
+}
+
+QRadioButton:hover {
+    background-color: #8E24AA;
+}
+
+QRadioButton:checked {
+    background-color: #4A148C;  
+}
+
+QRadioButton:pressed {
+    background-color: #4A148C;  
+}</string>
+    </property>
+    <property name="text">
+     <string>     EKLENTİ GİZLE</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_sil">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background-color: #6A1B9A; 
+    color: white;          
+    font-weight: bold;    
+    font-size: 20px;          
+    border-radius: 15px;    
+    border: none;           
+    padding: 10px;          
+}
+
+QPushButton:hover {
+    background-color: #8E24AA; 
+}
+
+QPushButton:pressed {
+    background-color: #4A148C;
+    padding-top: 12px;      
+    padding-left: 12px;       
+}</string>
+    </property>
+    <property name="text">
+     <string>SİL</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gb_sesli_wrapper">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border: none;
+    background: transparent;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="rd_btn_sesli_oku">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    background-color: #6A1B9A;
+    color: white;   
+    font-weight: bold;      
+    font-size: 20px;        
+    border-radius: 15px;      
+    border: none;            
+    padding: 0px;           
+    text-align: center;     
+}
+
+QRadioButton::indicator {
+    width: 0px;
+    height: 0px;
+}
+
+QRadioButton:hover {
+    background-color: #8E24AA;
+}
+
+QRadioButton:checked {
+    background-color: #4A148C;  
+}
+
+QRadioButton:pressed {
+    background-color: #4A148C;  
+}</string>
+     </property>
+     <property name="text">
+      <string>         SESLİ OKU</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border: none;
+    background: transparent;
+}</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QRadioButton" name="rd_btn_ai_ceviri">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    background-color: #6A1B9A;
+    color: white;   
+    font-weight: bold;      
+    font-size: 20px;        
+    border-radius: 15px;      
+    border: none;            
+    padding: 0px;           
+    text-align: center;     
+}
+
+QRadioButton::indicator {
+    width: 0px;
+    height: 0px;
+}
+
+QRadioButton:hover {
+    background-color: #8E24AA;
+}
+
+QRadioButton:checked {
+    background-color: #4A148C;  
+}
+
+QRadioButton:pressed {
+    background-color: #4A148C;  
+}</string>
+     </property>
+     <property name="text">
+      <string>         AI ÇEVİRİ</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_veri_goster">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton {
+    background-color: #6A1B9A; 
+    color: white;          
+    font-weight: bold;    
+    font-size: 20px;          
+    border-radius: 15px;    
+    border: none;           
+    padding: 10px;          
+}
+
+QPushButton:hover {
+    background-color: #8E24AA; 
+}
+
+QPushButton:pressed {
+    background-color: #4A148C;
+    padding-top: 12px;      
+    padding-left: 12px;       
+}</string>
+    </property>
+    <property name="text">
+     <string>VERİLERİ GÖSTER</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gb_butonlar_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>241</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+    border: 2px solid #555555; 
+    border-radius: 12px;
+    margin-top: 1.5ex; 
+    background-color: transparent;
+}
+
+QGroupBox::title {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    subcontrol-origin: margin;
+    subcontrol-position: top center; 
+    padding: 0 15px;
+}</string>
+    </property>
+    <property name="title">
+     <string>Eğitim </string>
+    </property>
+    <widget class="QPushButton" name="btn_egitime_basla">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+    background-color: #6A1B9A; 
+    color: white;      
+    font-weight: bold;
+    font-size: 20px;          
+    border-radius: 15px;     
+    border: none;           
+    padding: 10px;             
+}
+
+QPushButton:hover {
+    background-color: #8E24AA; 
+}
+
+QPushButton:pressed {
+    background-color: #4A148C;
+    padding-top: 12px;
+    padding-left: 12px;
+}</string>
+     </property>
+     <property name="text">
+      <string>EĞİTİME BAŞLA</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_egitimi_durdur">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #6A1B9A;
+    color: white;         
+    font-weight: bold;   
+    font-size: 20px;        
+    border-radius: 15px;      
+    border: none;           
+    padding: 10px;             
+}
+
+QPushButton:hover {
+    background-color: #8E24AA; 
+}
+
+QPushButton:pressed {
+    background-color: #4A148C;
+    padding-top: 12px;         
+    padding-left: 12px;  
+}</string>
+     </property>
+     <property name="text">
+      <string>EĞİTİMİ DURDUR</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="metin_kutusu_egitim">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>221</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/* Arka plan rengi (Koyu Gri) */
+background-color: #2C2C2C;
+color: white;
+border-radius: 15px;</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="gb_metinler">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>10</y>
+     <width>801</width>
+     <height>571</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QGroupBox {
+    border: 2px solid #555555; 
+    border-radius: 12px;
+    margin-top: 1.5ex; 
+    background-color: transparent;
+}
+
+QGroupBox::title {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    subcontrol-origin: margin;
+    subcontrol-position: top center; 
+    padding: 0 15px;
+}</string>
+   </property>
+   <property name="title">
+    <string>Metinler</string>
+   </property>
+   <widget class="QTextEdit" name="metin_kutusu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>781</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Arka plan rengi (Koyu Gri) */
+background-color: #C6CDFF;
+border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="metin_kutusu_ai">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>310</y>
+      <width>781</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Arka plan rengi (Koyu Gri) */
+background-color: #C6CDFF;
+border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>290</y>
+      <width>821</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #555555;
+    
+    min-height: 1.5px;
+    max-height: 1.5px;
+ 
+    border: none;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>290</y>
+      <width>821</width>
+      <height>2</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame {
+    background-color: #555555;
+    
+    min-height: 1.5px;
+    max-height: 1.5px;
+ 
+    border: none;
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
