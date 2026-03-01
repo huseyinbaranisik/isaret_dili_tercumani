@@ -10,60 +10,42 @@
 
 ---
 
-# 🚀 PROJECT OVERVIEW (EN)
+### 📝 PROJE HAKKINDA
+Bu çalışma, **Sayısal Görüntü İşleme** dersi final ödevi kapsamında geliştirilmiştir. Projenin temel odağı; görüntü segmentasyonu, bilgisayarlı görü ve derin öğrenme tekniklerini kullanarak işaret dili hareketlerini gerçek zamanlı olarak anlamlandırmaktır.
 
-This project, developed for the **Digital Image Processing** final exam, is an original **Real-Time Sign Language Translator** that blends image segmentation, computer vision, and deep learning. 
-
-Unlike traditional projects using static datasets, this tool features a **"Dynamic Training Module"** that allows users to create their own custom datasets and train models directly through the GUI without writing a single line of code.
-
-### 🌟 Key Features
-* **📍 High-Precision Tracking:** Real-time hand and body landmark detection using **MediaPipe**.
-* **🧠 Temporal Intelligence:** **LSTM (Long Short-Term Memory)** architecture to analyze and understand sequences of movements.
-* **🖥️ Unified Control Panel:** A professional UI built with **PyQt5** for data collection, training, and prediction.
-* **🔊 Voice Synthesis:** Instant text-to-speech conversion using **gTTS** and **pyttsx3** integrations.
-* **📂 Custom Dataset Creator:** Effortlessly record new gestures and expand the library.
-
----
-
-# 🚀 PROJE DETAYLARI (TR)
-
-**Sayısal Görüntü İşleme** dersi final ödevi kapsamında geliştirilen bu proje; görüntü segmentasyonu, bilgisayarlı görü ve derin öğrenme tekniklerini harmanlayan özgün bir **Gerçek Zamanlı İşaret Dili Tercümanı**dır.
-
-Hazır veri setlerinin ötesine geçerek, kullanıcıya kendi veri setini oluşturma ve modelini arayüz üzerinden eğitme imkanı tanıyan **"Dinamik Eğitim Modülü"** projenin en güçlü yanıdır.
+Sabit veri setlerine bağlı kalmak yerine, kullanıcının kendi işaretlerini sisteme tanıtmasına ve modelini arayüz üzerinden eğitmesine olanak tanıyan **"Dinamik Eğitim Modülü"** projenin temelini oluşturur.
 
 ### 🌟 Temel Özellikler
-* **📍 Yüksek Hassasiyetli Takip:** **MediaPipe** kütüphanesi ile el ve vücut eklemlerinin (landmarks) anlık takibi.
-* **🧠 Zamansal Analiz:** Hareket dizilerini anlamlandırmak için **TensorFlow/Keras** tabanlı **LSTM** mimarisi.
-* **🖥️ Hepsi Bir Arada Panel:** Veri toplama, eğitim ve tahmin süreçlerini yöneten **PyQt5** tabanlı kullanıcı arayüzü.
-* **🔊 Sesli Geri Bildirim:** Algılanan ifadelerin **gTTS** ve **pyttsx3** ile anlık olarak sese dönüştürülmesi.
-* **📂 Esnek Veri Seti:** Kod bilgisi gerektirmeyen, doğrudan arayüz üzerinden "Yeni Veri Seti Oluşturma" özelliği.
+* **📍 Hassas Takip:** **MediaPipe** aracılığıyla el ve vücut eklem noktalarının (landmarks) anlık takibi.
+* **🧠 Hareket Analizi:** Zaman serisi verilerini işlemek ve hareket dizilerini sınıflandırmak için kullanılan **LSTM** mimarisi.
+* **🖥️ Kullanıcı Arayüzü:** Veri toplama, model eğitimi ve tahmin süreçlerini yöneten **PyQt5** tabanlı kontrol paneli.
+* **🔊 Seslendirme:** Algılanan ifadelerin **gTTS** ve **pyttsx3** kütüphaneleri ile anlık sese dönüştürülmesi.
+* **📂 Esnek Veri Seti:** Kod yazmaya gerek kalmadan, doğrudan arayüz üzerinden yeni kelimeler ekleyebilme imkanı.
 
 ---
 
-# 🛠️ TECH STACK & ARCHITECTURE
+### 🛠️ TEKNOLOJİ YIĞINI
 
-Bu proje, modern mühendislik standartları ve modüler bir yapı üzerine inşa edilmiştir.
-
-| Bileşen / Component | Teknoloji / Technology | Kullanım Amacı / Purpose |
+| Bileşen | Teknoloji | Kullanım Amacı |
 | :--- | :--- | :--- |
-| **Vision Engine** | MediaPipe | Landmark Detection & Tracking |
-| **Deep Learning** | TensorFlow / LSTM | Sequential Action Recognition |
-| **Interface** | PyQt5 & Qt Designer | UI/UX & Workflow Management |
-| **Audio** | gTTS & pyttsx3 | Text-to-Speech Synthesis |
-| **Language** | Python | Core Logic & Scripting |
+| **Görüntü İşleme** | MediaPipe | Eklem Takibi ve Öznitelik Çıkarımı |
+| **Derin Öğrenme** | TensorFlow / Keras | LSTM Tabanlı Hareket Tanıma |
+| **Arayüz** | PyQt5 & Qt Designer | UI/UX ve Akış Yönetimi |
+| **Ses** | gTTS & pyttsx3 | Metinden Sese Dönüştürme |
+| **Dil** | Python | Çekirdek Mantık ve Betikleme |
 
 ---
 
-# 📱 DEMO & USAGE
+### 🚀 KURULUM VE KULLANIM
 
-> [!TIP]
-> **Nasıl Çalıştırılır? / How to Run?**
+> [!IMPORTANT]
+> **Adımları Takip Edin:**
 > 1. Gerekli kütüphaneleri yükleyin: `pip install -r requirements.txt`
-> 2. Ana arayüzü başlatın: `python main.py`
-> 3. "Veri Topla" sekmesinden yeni işaretler ekleyin veya mevcut modelle tahmine başlayın!
+> 2. Ana uygulamayı başlatın: `python main.py`
+> 3. "Veri Topla" sekmesinden yeni işaretler kaydedin veya mevcut modelle tahmine başlayın.
 
 ---
 
 <p align="center">
-  <i>Developed for Digital Image Processing Academic Final Project - 2026</i>
+  <i>Sayısal Görüntü İşleme Akademik Final Projesi - 2026</i>
 </p>
